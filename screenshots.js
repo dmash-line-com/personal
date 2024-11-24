@@ -1,12 +1,12 @@
 const puppeteer = require('puppeteer');
 const urls = [
-  'https://garage-mash.com/',
-  'https://garage-mash.com/#about',
-  'https://garage-mash.com/#services',
-  'https://garage-mash.com/#portfolio',
-  'https://garage-mash.com/#contact',
-  'https://garage-mash.com/notfound',
-  'https://garage-mash.com/notfound/',
+  'https://dmash-line.com/',
+  'https://dmash-line.com/#about',
+  'https://dmash-line.com/#services',
+  'https://dmash-line.com/#portfolio',
+  'https://dmash-line.com/#contact',
+  'https://dmash-line.com/notfound',
+  'https://dmash-line.com/notfound/',
 ];
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
