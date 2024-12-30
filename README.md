@@ -6,7 +6,7 @@
 - `gh-pages`
 - `gh-pages-maintenance`
 
-## URL
+## GitHub Pages
 
 - [Home](https://dmash-line.com/)
 - [About](https://dmash-line.com/#about)
