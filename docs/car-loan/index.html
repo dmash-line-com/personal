@@ -5,8 +5,558 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="信用回復ローンで、すべての人にマイカーの選択肢を。最長120回払い、頭金不要、審査に不安がある方もお気軽にご相談ください。">
     <title>信用回復ローン | すべての人にマイカーの選択肢を</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+        line-height: 1.7;
+        color: #333;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('images/bgimage.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        letter-spacing: 0.1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .hero-title span {
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        font-weight: bold;
+        transform: rotate(-2deg);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-title span:nth-child(1) { background: #FF8C6B; transform: rotate(-3deg); }
+      .hero-title span:nth-child(2) { background: #3A7BD5; transform: rotate(2deg); }
+      .hero-title span:nth-child(3) { background: #4ECDC4; transform: rotate(-1deg); }
+      .hero-title span:nth-child(4) { background: #FF6B9D; transform: rotate(3deg); }
+      .hero-title span:nth-child(5) { background: #FF9A56; transform: rotate(-2deg); }
+      .hero-title span:nth-child(6) { background: #2E86AB; transform: rotate(1deg); }
+      .hero-title span:nth-child(7) { background: #4A9B8E; transform: rotate(-3deg); }
+
+      .hero-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-features {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .feature-circle {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .feature-circle.blue {
+        background: #3A7BD5;
+      }
+
+      .feature-circle.orange {
+        background: #FF8C6B;
+      }
+
+      .feature-circle.teal {
+        background: #4A9B8E;
+      }
+
+      .feature-circle .icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .feature-circle .label {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+
+      .feature-circle .value {
+        font-size: 1.8rem;
+      }
+
+      .badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #D4AF37, #FFD700);
+        color: #333;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+        margin-top: 20px;
+      }
+
+      .badge .number {
+        font-size: 2rem;
+      }
+
+      /* Check Points */
+      .check-points {
+        background: white;
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: -40px auto 0;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 10;
+      }
+
+      .check-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+
+      .check-item::before {
+        content: "✓";
+        color: #FF6B9D;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-right: 15px;
+      }
+
+      /* Message Section */
+      .message {
+        background: #f8f9fa;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .message p {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 2;
+      }
+
+      /* About Section */
+      .about-section {
+        background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+        padding: 60px 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        background: #3A7BD5;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+
+      .about-content {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-illustration {
+        flex-shrink: 0;
+        font-size: 5rem;
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .concern-list {
+        list-style: none;
+        margin: 20px 0;
+      }
+
+      .concern-list li {
+        padding: 8px 0;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .concern-list li::before {
+        content: "✓";
+        color: #FF6B9D;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      .highlight {
+        color: #3A7BD5;
+        font-weight: bold;
+      }
+
+      /* Flow Section */
+      .flow-section {
+        background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+        padding: 60px 20px;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .step {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .step-number {
+        background: #3A7BD5;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+
+      .step-number small {
+        font-size: 0.7rem;
+      }
+
+      .step-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .step-title .icon {
+        font-size: 2rem;
+        color: #3A7BD5;
+      }
+
+      .step-description {
+        color: #666;
+        line-height: 1.8;
+      }
+
+      .fast-badge {
+        display: inline-block;
+        background: #FF6B9D;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transform: rotate(-5deg);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      /* Footer */
+      .footer {
+        background: #2C3E50;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .footer p {
+        margin: 5px 0;
+        font-size: 1rem;
+        opacity: 0.9;
+      }
+
+      .footer .company-name {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 5px;
+      }
+
+      .footer .license {
+        font-size: 0.9rem;
+        margin-top: 15px;
+      }
+
+      .support-message {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        margin: 40px 0;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .hero-title span {
+          padding: 8px 15px;
+        }
+
+        .hero-subtitle {
+          font-size: 1.3rem;
+        }
+
+        .hero-features {
+          gap: 20px;
+        }
+
+        .feature-circle {
+          width: 140px;
+          height: 140px;
+        }
+
+        .feature-circle .icon {
+          font-size: 2rem;
+        }
+
+        .feature-circle .value {
+          font-size: 1.4rem;
+        }
+
+        .check-points {
+          margin: -20px 20px 0;
+          padding: 30px 20px;
+        }
+
+        .check-item {
+          font-size: 1rem;
+        }
+
+        .about-content {
+          flex-direction: column;
+          padding: 30px 20px;
+        }
+
+        .about-illustration {
+          font-size: 4rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .steps {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>信用回復ローン</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-title">
+        <span>信</span>
+        <span>用</span>
+        <span>回</span>
+        <span>復</span>
+        <span>ロ</span>
+        <span>ー</span>
+        <span>ン</span>
+      </h1>
+      <p class="hero-subtitle">すべての人にマイカーの選択肢を</p>
+
+      <div class="hero-features">
+        <div class="feature-circle blue">
+          <div class="icon">📅</div>
+          <div class="label">最長</div>
+          <div class="value">120回払い</div>
+        </div>
+        <div class="feature-circle orange">
+          <div class="icon">💰</div>
+          <div class="label">原則</div>
+          <div class="value">頭金不要</div>
+        </div>
+        <div class="feature-circle teal">
+          <div class="icon">🚗</div>
+          <div class="label">希望の車を</div>
+          <div class="value">プロが手配</div>
+        </div>
+      </div>
+
+      <div class="badge">
+        月間販売台数 <span class="number">100</span>台以上
+      </div>
+    </section>
+
+    <!-- Check Points -->
+    <section class="check-points">
+      <div class="check-item">一般的なローン金利と同じ手数料</div>
+      <div class="check-item">北海道から沖縄県まで日本全国ご対応可！</div>
+      <div class="check-item">独自の特別枠で審査基準が通りやすい！</div>
+    </section>
+
+    <!-- Message -->
+    <section class="message">
+      <p>
+        「本当はこの車が欲しい…」けど審査が通らず諦めてませんか？ 当社は、そんなお悩みがあれば信用回復ローンで解決します！
+        過去にマイカーローンの審査が通らなかった方、勤続年数に不安がある方も、まずはお気軽にご相談ください。
+      </p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <h2 class="section-title">信用回復ローンとは</h2>
+        <div class="about-content">
+          <div class="about-illustration">🤔</div>
+          <div class="about-text">
+            <h3 style="margin-bottom: 15px; font-size: 1.3rem;">こんなお悩みはありませんか？</h3>
+            <ul class="concern-list">
+              <li>固定年収がない</li>
+              <li>勤続年数が浅い</li>
+              <li>過去のローン審査で落ちた</li>
+              <li>保証人が立てられない</li>
+            </ul>
+            <p style="margin-top: 25px; line-height: 1.9;">
+              <strong>信用情報に傷がついている方が、その信用を回復させることを目的とした特別なローンです。</strong>
+              過去の金融トラブルで信用情報に傷が付いた方を対象としてご利用いただいており、次回の乗り換えでは
+              <span class="highlight">「銀行ローン」「ディーラーローン」に通過</span>している実績も多数ございます！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section class="flow-section">
+      <div class="container">
+        <h2 class="section-title">ご納車までの流れ</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">
+              1<br><small>step</small>
+            </div>
+            <h3 class="step-title">
+              <span class="icon">📱</span>
+              お問い合わせ
+            </h3>
+            <p class="step-description">
+              お気軽にLINEからお問い合わせください。お客様のご状況をお伺いさせていただきます。
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">
+              2<br><small>step</small>
+            </div>
+            <h3 class="step-title">
+              <span class="icon">📋</span>
+              仮審査
+            </h3>
+            <p class="step-description">
+              お客様の現在の状況をもとに、無理のない範囲での与信可能額を迅速に審査いたします。
+            </p>
+            <div class="fast-badge">最短3時間で審査完了！</div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">
+              3<br><small>step</small>
+            </div>
+            <h3 class="step-title">
+              <span class="icon">🚙</span>
+              お車のご案内
+            </h3>
+            <p class="step-description">
+              お客様のご予算とご希望に合わせて、全国のオークション会場から厳選なお車をお探しいたします。
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">
+              4<br><small>step</small>
+            </div>
+            <h3 class="step-title">
+              <span class="icon">📝</span>
+              ご契約・ご納車準備
+            </h3>
+            <p class="step-description">
+              必要書類をご準備いただき、ご契約手続きを行います。お車の整備・登録作業も同時に進めさせていただきます。
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">
+              5<br><small>step</small>
+            </div>
+            <h3 class="step-title">
+              <span class="icon">🎉</span>
+              ご納車
+            </h3>
+            <p class="step-description">
+              整備・登録完了後、全国どこでもご指定の場所所までお車をお届けいたします。
+            </p>
+          </div>
+        </div>
+
+        <div class="support-message">
+          お申し込みからご納車まで、専属スタッフが迅速・丁寧にサポートいたします！
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="company-name">株式会社 D-MASH LINE</p>
+      <p>代表者：佐藤 拓哉</p>
+      <p class="license">古物商許可番号 北海道公安委員会 第101230001605号</p>
+    </footer>
   </body>
 </html>
