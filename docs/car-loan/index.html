@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="信用回復ローンで、すべての人にマイカーの選択肢を。最長120回払い、頭金不要、審査に不安がある方もお気軽にご相談ください。">
     <title>信用回復ローン | すべての人にマイカーの選択肢を</title>
     <style>
@@ -24,27 +24,33 @@
         background-color: #f5f5f5;
       }
 
+      .pdf-container {
+        width: 100%;
+        height: 100%;
+      }
+
       iframe {
         width: 100%;
         height: 100%;
         border: none;
       }
 
-      /* デスクトップ用 */
       @media (min-width: 768px) {
-        iframe {
+        .pdf-container {
           max-width: 800px;
+        }
+
+        iframe {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
       }
 
-      /* モバイル用 */
       @media (max-width: 767px) {
         body {
           background-color: #fff;
         }
 
-        iframe {
+        .pdf-container {
           position: fixed;
           top: 0;
           left: 0;
@@ -55,6 +61,8 @@
     </style>
   </head>
   <body>
-    <iframe src="../assets/pdf/car-loan.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" type="application/pdf"></iframe>
+    <div class="pdf-container">
+      <iframe src="../assets/pdf/car-loan.pdf#view=FitH&pagemode=none" type="application/pdf"></iframe>
+    </div>
   </body>
 </html>
