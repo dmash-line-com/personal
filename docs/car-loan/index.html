@@ -14,7 +14,7 @@
 
       html, body {
         height: 100%;
-        overflow: hidden;
+        width: 100%;
       }
 
       body {
@@ -27,9 +27,30 @@
       iframe {
         width: 100%;
         height: 100%;
-        max-width: 800px;
         border: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* デスクトップ用 */
+      @media (min-width: 768px) {
+        iframe {
+          max-width: 800px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      /* モバイル用 */
+      @media (max-width: 767px) {
+        body {
+          background-color: #fff;
+        }
+
+        iframe {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+        }
       }
     </style>
   </head>
