@@ -1,1 +1,189 @@
-wip
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="株式会社 D-MASH LINEのご納車実績をご紹介します。お客様にお届けした車両の一覧です。">
+    <title>ご納車実績 | 株式会社 D-MASH LINE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-section">
+        <h1>ご納車実績</h1>
+        <p>
+          オークション直仕入れだから実現できる、高品質・適正価格の中古車。
+          北海道から関東まで、全国のお客様にお届けしています。
+          車両選びから整備・納車まで一台一台丁寧に対応し、
+          お引き渡し後も安心してお乗りいただけるようサポートいたします。
+        </p>
+        <div class="signature">
+          <span class="signature-title">株式会社 D-MASH LINE　代表取締役</span>
+          <svg class="signature-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+            <text x="150" y="55" text-anchor="middle" font-family="'Caveat', 'Zen Kurenaido', cursive, sans-serif" font-size="42" fill="#333" letter-spacing="8" style="paint-order: stroke; stroke: #333; stroke-width: 0.3px; stroke-linecap: round; stroke-linejoin: round;">佐藤 拓哉</text>
+          </svg>
+        </div>
+      </div>
+      <div class="card-list" id="card-list"></div>
+      <div class="line-section">
+        <p>まずはお気軽にご相談ください</p>
+        <a href="https://lin.ee/dHbAsr2" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          LINEで無料相談する
+        </a>
+      </div>
+      <footer class="footer">
+        <p>&copy; 2026 D-MASH LINE Co., Ltd.</p>
+      </footer>
+    </div>
+    <script>
+      const salesData = [
+        {
+          image: "images/placeholder.svg",
+          customer: "北海道 S様",
+          name: "スバル フォレスター",
+          year: "2021年式",
+          model: "Advance",
+          mileage: "22,000 km",
+          deliveryDate: "2025年12月",
+          comment: "通勤とスキー場通いの両立がしたいとのご相談。四駆で燃費も良く、冬道も安心とのお声をいただきました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "東京都 M様",
+          name: "マツダ CX-5",
+          year: "2020年式",
+          model: "XD プロアクティブ",
+          mileage: "38,000 km",
+          deliveryDate: "2025年11月",
+          comment: "ディーゼルの力強さが決め手に。高速の合流でもストレスがないと喜んでいただけました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "埼玉県 T様",
+          name: "トヨタ ヴォクシー",
+          year: "2019年式",
+          model: "ZS 煌",
+          mileage: "50,000 km",
+          deliveryDate: "2025年10月",
+          comment: "お子さま3人のご家族。チャイルドシート2台載せても余裕がありますと嬉しいご報告をいただきました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "千葉県 Y様",
+          name: "スズキ スペーシア",
+          year: "2022年式",
+          model: "ハイブリッド X",
+          mileage: "10,000 km",
+          deliveryDate: "2025年9月",
+          comment: "初めてのマイカー購入。スライドドアで買い物もラクですと初日からたくさん乗ってくださっています。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "神奈川県 A様",
+          name: "ホンダ フィット",
+          year: "2019年式",
+          model: "HOME",
+          mileage: "25,000 km",
+          deliveryDate: "2025年8月",
+          comment: "前の車が急に故障してお急ぎのご相談。最短で納車でき、翌日から通勤に使えましたと安心していただけました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "東京都 K様",
+          name: "トヨタ ハリアー",
+          year: "2020年式",
+          model: "G",
+          mileage: "32,000 km",
+          deliveryDate: "2025年7月",
+          comment: "ずっと憧れだったとのこと。内装の綺麗さに驚かれ、週末のドライブが楽しみですと笑顔でお引き渡しできました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "北海道 N様",
+          name: "ダイハツ タント",
+          year: "2021年式",
+          model: "X セレクション",
+          mileage: "15,000 km",
+          deliveryDate: "2025年6月",
+          comment: "保育園の送り迎え用に。ドアが大きく開くので子どもの乗せ降ろしが本当にラクですとのお声をいただきました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "茨城県 H様",
+          name: "トヨタ プリウス",
+          year: "2020年式",
+          model: "S ツーリング",
+          mileage: "40,000 km",
+          deliveryDate: "2025年5月",
+          comment: "片道40kmの通勤。ガソリン代が半分以下になりましたと、燃費の良さに驚かれていました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "栃木県 O様",
+          name: "日産 ノート",
+          year: "2021年式",
+          model: "X",
+          mileage: "20,000 km",
+          deliveryDate: "2025年4月",
+          comment: "e-POWERの静かさと加速が気に入ったとのこと。試乗で即決いただきました。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "北海道 I様",
+          name: "スズキ ジムニー",
+          year: "2018年式",
+          model: "XC 4WD",
+          mileage: "45,000 km",
+          deliveryDate: "2025年3月",
+          comment: "釣りとキャンプ用の2台目として。多少の悪路も気にせず入っていけると週末が待ち遠しいそうです。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "群馬県 W様",
+          name: "ホンダ N-BOX",
+          year: "2020年式",
+          model: "G・L ターボ",
+          mileage: "28,000 km",
+          deliveryDate: "2025年2月",
+          comment: "軽でもターボなら坂道もスイスイと聞いて選ばれました。街乗りメインで燃費も上々とのことです。"
+        },
+        {
+          image: "images/placeholder.svg",
+          customer: "東京都 F様",
+          name: "トヨタ アクア",
+          year: "2019年式",
+          model: "S グレード",
+          mileage: "35,000 km",
+          deliveryDate: "2025年1月",
+          comment: "免許取りたてのお嬢様へのプレゼント。コンパクトで運転しやすく、親御さんも安心ですと喜ばれました。"
+        }
+      ];
+
+      const grid = document.getElementById("card-list");
+
+      salesData.forEach(function(car) {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        let html = '<img src="' + car.image + '" alt="' + car.name + '">';
+        html += '<div class="card-body">';
+        html += '<h3><span class="card-customer">' + car.customer + '</span><span class="card-name">' + car.name + '</span></h3>';
+        html += '<p class="card-info">' + car.year + ' / ' + car.model + '</p>';
+        html += '<p class="card-info">走行距離: ' + car.mileage + '</p>';
+        html += '<p class="card-info">納車時期: ' + car.deliveryDate + '</p>';
+
+        if (car.comment) {
+          html += '<p class="card-comment">' + car.comment + '</p>';
+        }
+
+        html += '</div>';
+        card.innerHTML = html;
+        grid.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
