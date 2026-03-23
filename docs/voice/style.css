@@ -19,7 +19,6 @@ body {
 .header-section {
   padding: 56px 24px 40px;
   text-align: center;
-  background: #fff;
 }
 
 .header-section h1 {
@@ -101,7 +100,6 @@ body {
     width: 40%;
     min-width: 120px;
     flex-shrink: 0;
-    aspect-ratio: 4 / 3;
   }
 }
 
