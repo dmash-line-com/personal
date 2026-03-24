@@ -10,7 +10,7 @@ const salesData = [
     comment: "通勤とスキー場通いの両立がしたいとのご相談。四駆で燃費も良く、冬道も安心とのお声をいただきました。"
   },
   {
-    image: "",
+    image: "images/2.JPG",
     customer: "東京都 M様",
     name: "マツダ CX-5",
     year: "2020年式",
@@ -20,7 +20,7 @@ const salesData = [
     comment: "ディーゼルの力強さが決め手に。高速の合流でもストレスがないと喜んでいただけました。"
   },
   {
-    image: "",
+    image: "images/3.JPG",
     customer: "埼玉県 T様",
     name: "トヨタ ヴォクシー",
     year: "2019年式",
