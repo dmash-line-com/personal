@@ -159,6 +159,7 @@ h6 {
 }
 
 #header.header-top .social-links,
+#header.header-top .voice-link,
 #header.header-top h2 {
   display: none;
 }
