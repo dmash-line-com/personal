@@ -1,6 +1,6 @@
 const salesData = [
   {
-    image: "",
+    image: "images/1.jpg",
     customer: "東京都 F様",
     name: "トヨタ アクア",
     year: "2019年式",
