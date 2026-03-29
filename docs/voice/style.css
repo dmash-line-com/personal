@@ -140,6 +140,19 @@ body {
   line-height: 1.7;
 }
 
+.more-btn {
+  display: block;
+  margin: 0 auto 48px;
+  padding: 14px 48px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #e67e22;
+  background: #fff;
+  border: 2px solid #e67e22;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
 .line-section {
   padding: 48px 16px;
   text-align: center;

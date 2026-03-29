@@ -28,6 +28,7 @@
         </div>
       </div>
       <div class="card-list" id="card-list"></div>
+      <button id="more-btn" class="more-btn">もっと見る</button>
       <div class="line-section">
         <p>まずはお気軽にご相談ください</p>
         <a href="https://lin.ee/dHbAsr2" target="_blank" rel="noopener noreferrer">
@@ -42,25 +43,41 @@
     <script src="data.js"></script>
     <script>
       const grid = document.getElementById("card-list");
+      const moreBtn = document.getElementById("more-btn");
       const defaultImage = "images/placeholder.svg";
+      const PAGE_SIZE = 5;
+      let shown = 0;
 
-      salesData.forEach((car) => {
-        const card = document.createElement("div");
-        card.className = "card";
-        const image = car.image || defaultImage;
+      function renderCards(count) {
+        const fragment = document.createDocumentFragment();
+        const end = Math.min(shown + count, salesData.length);
+        for (let i = shown; i < end; i++) {
+          const car = salesData[i];
+          const card = document.createElement("div");
+          card.className = "card";
+          const image = car.image || defaultImage;
 
-        card.innerHTML = `
-          <img src="${image}" alt="${car.name}">
-          <div class="card-body">
-            <h3><span class="card-customer">${car.customer}</span><span class="card-name">${car.name}</span></h3>
-            <p class="card-info">${car.year} / ${car.model}</p>
-            <p class="card-info">走行距離: ${car.mileage}</p>
-            <p class="card-info">納車時期: ${car.deliveryDate}</p>
-            ${car.comment ? `<p class="card-comment">${car.comment}</p>` : ""}
-          </div>`;
+          card.innerHTML = `
+            <img src="${image}" alt="${car.name}">
+            <div class="card-body">
+              <h3><span class="card-customer">${car.customer}</span><span class="card-name">${car.name}</span></h3>
+              <p class="card-info">${car.year} / ${car.model}</p>
+              <p class="card-info">走行距離: ${car.mileage}</p>
+              <p class="card-info">納車時期: ${car.deliveryDate}</p>
+              ${car.comment ? `<p class="card-comment">${car.comment}</p>` : ""}
+            </div>`;
 
-        grid.appendChild(card);
-      });
+          fragment.appendChild(card);
+        }
+        grid.appendChild(fragment);
+        shown = end;
+        if (shown >= salesData.length) {
+          moreBtn.style.display = "none";
+        }
+      }
+
+      moreBtn.addEventListener("click", () => renderCards(PAGE_SIZE));
+      renderCards(PAGE_SIZE);
     </script>
   </body>
 </html>
