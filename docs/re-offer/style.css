@@ -39,6 +39,10 @@ body {
   background-color: #e67e22;
 }
 
+.header-section h1.mt-50 {
+  margin-top: 35px;
+}
+
 .header-section p {
   font-size: 16px;
   color: #666;
