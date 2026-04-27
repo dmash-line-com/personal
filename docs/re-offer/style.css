@@ -61,6 +61,15 @@ body {
   text-underline-offset: 4px;
 }
 
+.section-image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 28px auto 0;
+  border-radius: 8px;
+}
+
 .section-image-rankup {
   display: block;
   width: 100%;
@@ -70,27 +79,33 @@ body {
   border-radius: 8px;
 }
 
-.section-image-reason {
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  margin: 28px auto 0;
-  border-radius: 8px;
-}
-
 .savings-result {
+  position: relative;
   display: inline-block;
   background-color: #e67e22;
   color: #fff;
   border-radius: 12px;
   padding: 20px 40px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  box-shadow: 0 6px 16px rgba(230, 126, 34, 0.3);
+}
+
+.savings-result::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #e67e22;
 }
 
 .savings-result.mt-20 {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .savings-label {
@@ -124,7 +139,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
 }
 
 .diff-bridge.mt-20 {
@@ -132,30 +147,39 @@ body {
 }
 
 .diff-badge {
+  position: relative;
   display: inline-flex;
   align-items: baseline;
   gap: 4px;
   background-color: #e67e22;
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
-  padding: 10px 28px;
+  padding: 14px 32px;
   border-radius: 50px;
+  box-shadow: 0 6px 16px rgba(230, 126, 34, 0.3);
+}
+
+.diff-badge::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #e67e22;
 }
 
 .diff-amount {
-  font-size: 26px;
+  font-size: 28px;
   letter-spacing: 0.02em;
 }
 
 .diff-amount small {
   font-size: 16px;
-}
-
-.diff-arrow {
-  font-size: 22px;
-  color: #e67e22;
-  line-height: 1;
 }
 
 .diff-arrow-label {
