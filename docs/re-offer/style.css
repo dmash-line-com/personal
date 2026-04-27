@@ -67,3 +67,55 @@ body {
   width: 180px;
   height: auto;
 }
+
+.line-section {
+  padding: 48px 16px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.line-section p {
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.line-section a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #06C755;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 16px 48px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+}
+
+.line-section a svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  fill: #fff;
+}
+
+.footer {
+  padding: 24px 16px;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #999;
+  font-size: 13px;
+}
+
+@media (max-width: 375px) {
+  .line-section p {
+    font-size: 16px;
+  }
+  .line-section a {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
