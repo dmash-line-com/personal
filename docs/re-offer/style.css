@@ -51,6 +51,25 @@ body {
   line-height: 1.8;
 }
 
+.header-section p.mt-20 {
+  margin-top: 20px;
+}
+
+.underline-orange {
+  text-decoration: underline wavy #e67e22;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.section-image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 28px auto 0;
+  border-radius: 8px;
+}
+
 .signature {
   margin-top: 24px;
   text-align: center;
