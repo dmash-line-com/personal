@@ -119,10 +119,19 @@ body {
   color: #e67e22;
 }
 
+.quote-card.is-ours .quote-sub strong {
+  color: #e67e22;
+}
+
 .quote-sub {
-  font-size: 12px;
+  font-size: 15px;
   color: #888;
   margin-top: 6px;
+}
+
+.quote-sub strong {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .signature {
