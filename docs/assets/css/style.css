@@ -293,7 +293,7 @@ h6 {
 */
 .mobile-nav-toggle {
   color: #fff;
-  font-size: 28px;
+  font-size: 32px;
   cursor: pointer;
   display: none;
   line-height: 0;
@@ -301,11 +301,18 @@ h6 {
   position: fixed;
   right: 15px;
   top: 15px;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  background: #ff8600;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .navbar ul {
@@ -330,6 +337,8 @@ h6 {
   position: absolute;
   top: 15px;
   right: 15px;
+  background: transparent;
+  box-shadow: none;
 }
 
 .navbar-mobile ul {
